@@ -127,7 +127,7 @@ nav
 
 .admin-nav button
 {
-    background-color: var(--back2);
+    background-color: #1d1d1d00;
     width: 40px;
     height: 40px;
     margin: 10px;
