@@ -1,0 +1,417 @@
+:root
+{
+    --back1: #181818;
+    --back2: #212121c4;
+    --grey1: #323232;
+    --grey2: rgb(119, 119, 119);
+    --dark: #121212;
+    --white: #ffffff;
+
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    font-size: 62.5%;
+
+}
+
+html::-webkit-scrollbar
+{
+    width: .4vw;
+}
+
+html::-webkit-scrollbar-thumb
+{
+    background-color: rgb(119, 119, 119);
+    border-radius: 20px;
+    margin: 20px;
+}
+
+html::-webkit-scrollbar-track
+{
+    background-color: var(--dark);
+}
+
+body
+{
+    background: var(--back2);
+    font-family: 'Roboto', sans-serif;
+    background: var(--dark);
+}
+
+nav
+{
+    width: 100%;
+}
+
+.nav-container
+{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid var(--grey1);
+    justify-content: space-between;
+    background-color: var(--back2);
+}
+.menu-icon-yt
+{
+    width: 20px;
+    margin: 18px 14px 18px 30px;
+}
+.logo-yt-premium
+{
+    height: 24px;
+    margin: 18px 0 18px 14px;
+}
+
+.start-nav,
+.search-nav,
+.search-nav form,
+.admin-nav,
+.mobile-search,
+.shortcuts-yt
+{
+    display: flex;
+}
+.search-nav form button
+{
+    background-color: var(--grey1);
+    width: 64px;
+    height: 40px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    margin: 10px 14px 10px 0;
+    cursor: pointer;
+
+}
+.search-nav form button img
+{
+    width: 20px;
+}
+.search-nav button
+{
+    background-color: var(--dark);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    margin: 10px 0 10px 0;
+}
+.search-nav button a img
+{
+    width: 20px;
+}
+.search-bar-yt
+{
+    background-color: var(--dark);
+    height: 40px;
+    width: 400px;
+    border: 0.5px solid var(--grey1);
+    padding-left: 10px;
+    border-radius: 5px 0 0 5px;
+    margin: 10px 0 10px 14px;
+    color: var(--white);
+}
+.mobile-search
+{
+    display: none;
+}
+
+.admin-nav button
+{
+    background-color: var(--back2);
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+}
+.admin-nav button img
+{
+    width: 20px;
+}
+#profile-picture-user
+{
+    margin-right: 24px;
+}
+#profile-picture-user img
+{
+    width: 32px;
+    border-radius: 50%;
+}
+
+/* Aquí empieza la edicion del <main>  */
+
+main
+{
+    display: flex;
+}
+
+.sidebar
+{
+    display: block;
+    position: fixed;
+    width: 222px;
+    min-height: 100%;
+    bottom: 0px;
+    top: 58px;
+    background-color: var(--back2);
+}
+
+.side-items
+{
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+.item
+{
+    display: block;
+    position: relative;
+}
+.item a
+{
+    vertical-align: middle;
+    align-items: center;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: left;
+    padding: 16px 0 14px 0;
+    width: 222px; /* cambios aqui */
+    height: auto;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--white);
+}
+.item a img
+{
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    width: 20px;
+    margin: 0 24px 0 0; /* cabios aqui */
+}
+.item a div
+{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0 30px;
+    width: 222px;
+}
+
+
+.main-container,
+#main-section
+{
+    display: flex;
+    justify-content: center;
+    padding: 0 0 0 222px;
+    width: 100%;
+    height: auto;
+    background-color: var(--dark);
+}
+.video-feed
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 320px);
+    gap: 26px;
+    place-content: center;
+    width: 100%;
+    max-width: 1950px;
+    padding: 84px 20px 20px 20px;
+}
+.video-card
+{
+    width: 320px;
+}
+.video-card img
+{
+    width: 320px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.info-video-card
+{
+    display: flex;
+    padding: 10px 10px 10px 0;
+}
+.info-card 
+{
+    display: flex;
+}
+.profile-picture img
+{
+    width: 44px;
+    border-radius: 50%;
+}
+.title-card
+{
+    margin-left: 10px;
+}
+.title-card h3
+{
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 3px 0 8px 0;
+}
+.title-card span
+{
+    color: var(--grey2);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 990px) 
+{
+    .search-nav
+    {
+        display: none;
+    }
+
+    .mobile-search
+    {
+        display: flex;
+    }
+
+    /* sidebar CSS  */
+
+    .sidebar
+    {
+        margin: 0 auto;
+        display: block;
+        position: fixed;
+        top: 58px;
+        width: auto;
+        min-height: 100vh;
+        background-color: var(--back2);
+    }
+    .side-items
+    {
+        display: flex;
+        flex-direction: column;
+        text-size-adjust: 100%;
+    }
+    .item
+    {
+        display: block;
+        position: relative;
+        text-size-adjust: 100%;
+    }
+    .item a
+    {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 16px 0 14px 0;
+        width: 80px;
+        height: auto;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+        color: var(--white);
+    }
+    .item a img
+    {
+        display: flex;
+        justify-content: center;
+        vertical-align: middle;
+        align-items: center;
+        width: 20px;
+        margin: 0 0 8px 0;
+    }
+    .item a .only-item
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-container,
+    #main-section
+    {
+        padding: 0 0 0 80px;
+    }
+}
+
+/* @media only screen and (max-width: 786px)
+{
+
+    .video-feed
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 60px 0 0 0;
+    }
+
+    .video-card,
+    .video-card img
+    {
+        width: 100%;
+    }
+
+    .info-video-card
+    {
+        padding: 20px;
+    }
+
+    .profile-picture img
+    {
+        width: 44px;
+        border-radius: 50%;
+    }
+    
+} */
+
+@media only screen and (max-width: 600px)
+{
+
+    .sidebar,
+    .shortcuts-yt,
+    #mobile-search-voice,
+    #menu-nav
+    {
+        display: none;
+    }
+
+    .main-container,
+    #main-section
+    {
+        padding: 0;
+    }
+
+    .video-feed
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 60px 0 0 0;
+    }
+
+    .video-card,
+    .video-card img
+    {
+        width: 100%;
+    }
+
+    .info-video-card
+    {
+        padding: 20px;
+    }
+
+    .profile-picture img
+    {
+        width: 44px;
+        border-radius: 50%;
+    }
+
+    
+}
