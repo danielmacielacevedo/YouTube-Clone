@@ -57,6 +57,7 @@ nav
     height: 60px;
     width: 100%;
     display: flex;
+    padding-top: 2px;
     border-bottom: 1px solid var(--grey1);
     justify-content: space-between;
     background-color: var(--back2);
@@ -69,7 +70,7 @@ nav
 .logo-yt-premium
 {
     height: 24px;
-    margin: 18px 0 18px 14px;
+    margin: 16px 0 18px 14px;
 }
 
 .start-nav,
@@ -224,7 +225,7 @@ main
 {
     display: grid;
     grid-template-columns: repeat(auto-fill, 320px);
-    gap: 26px;
+    gap: 10px;
     place-content: center;
     width: 100%;
     max-width: 1950px;
@@ -239,6 +240,7 @@ main
     width: 320px;
     object-fit: cover;
     cursor: pointer;
+    border-radius: 20px;
 }
 .info-video-card
 {
@@ -393,7 +395,7 @@ main
     {
         display: flex;
         flex-direction: column;
-        padding: 60px 0 0 0;
+        /* padding: 60px 0 0 0; */
     }
 
     .video-card,
@@ -402,10 +404,10 @@ main
         width: 100%;
     }
 
-    .info-video-card
+    /* .info-video-card
     {
         padding: 20px;
-    }
+    } */
 
     .profile-picture img
     {
