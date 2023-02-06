@@ -225,7 +225,7 @@ main
 {
     display: grid;
     grid-template-columns: repeat(auto-fill, 320px);
-    gap: 10px;
+    gap: 10px 20px;
     place-content: center;
     width: 100%;
     max-width: 1950px;
